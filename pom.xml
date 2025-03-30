@@ -15,7 +15,6 @@
         <allure-maven.version>2.15.2</allure-maven.version>
         <calculator.version>1.0</calculator.version>
     </properties>
-
     <dependencies>
 <!--        <dependency>-->
 <!--            <groupId>com.epam.tat.module4</groupId>-->
