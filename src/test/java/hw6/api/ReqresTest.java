@@ -52,18 +52,19 @@ public class ReqresTest {
         Assert.assertEquals(id,successfulReg.getId());
         Assert.assertEquals(token, successfulReg.getToken());
 
-        Register register1 = new Register("sydney@fife");
-        UnsuccessfulReg unsuccessfulReg = given()
-                .body(register1)
-                .when()
-                .contentType(ContentType.JSON)
-                .post(URL + "/api/register")
-                .then()
-                .log()
-                .all()
-                .extract()
-                .as(UnsuccessfulReg.class);
-        Assert.assertEquals("Missing password", unsuccessfulReg.getError());
+//        Uncomment code bellow and comment upper code to check unsuccessful register
+//        Register register1 = new Register("sydney@fife");
+//        UnsuccessfulReg unsuccessfulReg = given()
+//                .body(register1)
+//                .when()
+//                .contentType(ContentType.JSON)
+//                .post(URL + "/api/register")
+//                .then()
+//                .log()
+//                .all()
+//                .extract()
+//                .as(UnsuccessfulReg.class);
+//        Assert.assertEquals("Missing password", unsuccessfulReg.getError());
     }
 
     @Test

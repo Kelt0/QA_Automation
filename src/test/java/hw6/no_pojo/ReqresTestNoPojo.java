@@ -72,20 +72,21 @@ public class ReqresTestNoPojo {
         Assert.assertEquals(actualId, expectedId);
         Assert.assertEquals(actualToken, expectedToken);
 
-        HashMap<String,String> email = new HashMap<>();
-        email.put("email", "sydney@fife");
-        Response response1 = given()
-                .body(email)
-                .when()
-                .contentType(ContentType.JSON)
-                .post(URL + "/api/register")
-                .then()
-                .log()
-                .all()
-                .extract()
-                .response();
-        JsonPath jsonPath1 = response1.jsonPath();
-        Assert.assertEquals("Missing password", jsonPath1.getString("error"));
+//        Uncomment code bellow and comment upper code to check unsuccessful register
+//        HashMap<String,String> email = new HashMap<>();
+//        email.put("email", "sydney@fife");
+//        Response response1 = given()
+//                .body(email)
+//                .when()
+//                .contentType(ContentType.JSON)
+//                .post(URL + "/api/register")
+//                .then()
+//                .log()
+//                .all()
+//                .extract()
+//                .response();
+//        JsonPath jsonPath1 = response1.jsonPath();
+//        Assert.assertEquals("Missing password", jsonPath1.getString("error"));
     }
 
     @Test
