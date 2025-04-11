@@ -1,6 +1,5 @@
 package hw4.pages;
 
-import hw3.pages.DifferentElementsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,9 +59,9 @@ public class LoginPage extends AbstractPage {
         return headBut;
     }
 
-    public String getUserName() {
-        return userName.getText();
-    }
+    public WebElement getUserName() {
+        return userName;
+    } //убрали .getText() в hw4 ex1 и сделали юзернейма в веб элемент
 
     public WebElement getFrameBut() {
         return frameBut;
