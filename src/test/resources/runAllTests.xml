@@ -7,6 +7,14 @@
             <class name="hw1.TestSub"/>
             <class name="hw1.TestMult"/>
             <class name="hw1.TestDivide"/>
+            <class name="hw2.ex1.TestEx1"/>
+            <class name="hw2.ex2.TestEx2"/>
+            <class name="hw3.tests.ex1.TestEx1"/>
+            <class name="hw3.tests.ex2.TestEx2"/>
+            <class name="hw4.tests.ex1.TestEx1"/>
+            <class name="hw4.tests.ex2.TestEx2"/>
+            <class name="hw6.api.ReqresTest"/>
+            <class name="hw6.no_pojo.ReqresTestNoPojo"/>
         </classes>
     </test>
 </suite>
