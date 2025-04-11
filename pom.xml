@@ -19,12 +19,9 @@
         <allure-testng.version>2.29.1</allure-testng.version>
         <logback-classic.version>1.4.11</logback-classic.version>
 
-        <sumAndSubTestsXML>src/test/resources/runSumAndSubTests.xml</sumAndSubTestsXML>
-        <multiplicationandDivisionTestsXML>src/test/resources/runMultiAndDivideTests.xml</multiplicationandDivisionTestsXML>
         <allTestsHomework2XML>src/test/resources/runAllTestsForHomeWork2.xml</allTestsHomework2XML>
         <allTestsHomework3XML>src/test/resources/runAllTestsForHomeWork3.xml</allTestsHomework3XML>
         <allTestsHomework4XML>src/test/resources/runAllTestsForHomeWork4.xml</allTestsHomework4XML>
-        <allTestsHomework6XML>src/test/resources/runAllTestsForHomeWork6.xml</allTestsHomework6XML>
     </properties>
 
     <dependencies>
@@ -155,9 +152,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/runAllTests.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
                     <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
@@ -177,7 +174,7 @@
                         <version>${maven-surefire-plugin.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>${sumAndSubTestsXML}</suiteXmlFile>
+                                <suiteXmlFile>test/resources/runSumAndSubTests.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -195,7 +192,7 @@
                         <version>${maven-surefire-plugin.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>${multiplicationandDivisionTestsXML}</suiteXmlFile>
+                                <suiteXmlFile>test/resources/runMultiAndDivideTests.xml</suiteXmlFile>
                             </suiteXmlFiles>
                         </configuration>
                     </plugin>
@@ -246,23 +243,6 @@
             </properties>
         </profile>
 
-        <profile>
-            <id>allTestsHomeWork6</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <version>${maven-surefire-plugin.version}</version>
-                        <configuration>
-                            <suiteXmlFiles>
-                                <suiteXmlFile>${allTestsHomework6XML}</suiteXmlFile>
-                            </suiteXmlFiles>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
 
     </profiles>
     <reporting>
